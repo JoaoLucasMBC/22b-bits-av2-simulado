@@ -20,7 +20,7 @@ def exe1(a, b, c, q):
 def exe2(p, q, r, s):
     @always_comb
     def comb():
-        s.next = 0
+        s.next = (q and r) or (not p)
 
     return instances()
 
