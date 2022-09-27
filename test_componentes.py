@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from myhdl import *
-from .componentes import *
+from componentes import *
 
 vec_exe1 = ["1101", "1111", "0111", "0100", "0010", "1010"]
 

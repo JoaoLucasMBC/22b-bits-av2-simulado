@@ -6,13 +6,13 @@
 
 
 from myhdl import *
-from .ula_aux import *
+from ula_aux import *
 
 
 def exe1(a, b, c, q):
     @always_comb
     def comb():
-        q.next = 0
+        q.next = (a & b) | ((b & c) & (b | c))
 
     return instances()
 
