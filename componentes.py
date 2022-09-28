@@ -63,10 +63,10 @@ def exe4_ula(a, b, inverte_a, inverte_b, c_in, c_out, selecao, zero, resultado):
         negA.next = not a
         negB.next = not b
 
-        and_out.next = muxA_out and muxB_out
-        or_out.next = muxA_out or muxB_out
+        and_out.next = muxA_out & muxB_out
+        or_out.next = muxA_out | muxB_out
 
         resultado.next = mux4_out
-        zero.next = not(mux4_out or mux4_out)
+        zero.next = not(mux4_out | mux4_out)
 
     return instances()
