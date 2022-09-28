@@ -28,10 +28,10 @@ def exe2(p, q, r, s):
 def exe3(x1, x0, y1, y0, z3, z2, z1, z0):
     @always_comb
     def comb():
-        z0.next = 0
-        z1.next = 0
-        z2.next = 0
-        z3.next = 0
+        z0.next = x0 & y0
+        z1.next = ((not x1) & x0 & y1) | (x1 & (not y1) & y0) | (x1 & (not x0) & y0) | (x0 & y1 & (not y0))
+        z2.next = (x1 & (not x0) & y1) | (x0 & x1 & y1 & (not y0))
+        z3.next = x0 & x1 & y0 & y1
 
     return instances()
 
