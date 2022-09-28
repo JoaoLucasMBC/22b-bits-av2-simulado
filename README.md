@@ -71,7 +71,7 @@ A Figura a seguir representa um circuito multiplicador de números inteiros posi
 
 ### (a)
 
-> No papel
+> No papel [link](https://alinsperedu-my.sharepoint.com/:x:/r/personal/joaolmbc_al_insper_edu_br/_layouts/15/doc2.aspx?sourcedoc=%7B82171235-0CA3-43C0-9A2D-888C2F4C62DA%7D&file=Book.xlsx&action=editnew&mobileredirect=true&wdNewAndOpenCt=1664298354764&ct=1664298354764&wdPreviousSession=9c69c0d4-2735-4407-a3b5-e310f0ca9a37&wdOrigin=OFFICECOM-WEB.START.NEW)
 
 Encontre a equação que realiza a multiplicação entre dois vetores de dois bits cada x e y e resulta em um vetor de quatro bits z e então implemente a solução em MyHDL.
 
@@ -113,16 +113,16 @@ Preencha o estado dos pinos de controle para cada uma das funções abaixo.
 
 | Função         | InverteA | InverteB | Vem 1 | Seleção (bit 1) | Seleção (bit 0) |
 | -------------- | -------- | -------- | ----- | --------------- | --------------- |
-| `A + B`        |          |          |       |                 |                 |
-| `A - B`        |          |          |       |                 |                 |
-| `B - A`        |          |          |       |                 |                 |
-| `A nor B`      |          |          |       |                 |                 |
-| `A nand B`     |          |          |       |                 |                 |
-| `(notA) and B` |          |          |       |                 |                 |
-| `A or (notB)`  |          |          |       |                 |                 |
-| `?(A == B)`    |          |          |       |                 |                 |
+| `A + B`        |     0    |     0    |   0   |        1        |        0        |
+| `A - B`        |     0    |     1    |   1   |        1        |        0        |
+| `B - A`        |     1    |     0    |   1   |        1        |        0        |
+| `A nor B`      |     1    |     1    |   0   |        0        |        0        |
+| `A nand B`     |     1    |     1    |   0   |        0        |        1        |
+| `(notA) and B` |     1    |     0    |   0   |        0        |        0        |
+| `A or (notB)`  |     0    |     1    |   0   |        0        |        1        |
+| `?(A == B)`    |     0    |     1    |   1   |        1        |        0        |
 
-- `?(A == B)`: Como verificar se o vetor de entrada 'A' é igual a 'B'?
+- `?(A == B)`: Como verificar se o vetor de entrada 'A' é igual a 'B'? Só fazer `A - B` e verificar se o `zero` iguala 1. 
 
 ### b)
 
